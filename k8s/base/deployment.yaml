@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-api-flower
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go-api-flower
+  template:
+    metadata:
+      labels:
+        app: go-api-flower
+    spec:
+      containers:
+        - name: go-api-flower
+          image: andresdev3/go-api-flower:latest
+          ports:
+            - containerPort: 8080

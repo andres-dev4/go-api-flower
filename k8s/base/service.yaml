@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-api-flower
+  labels:
+    app: go-api-flower
+spec:
+  selector:
+    app: go-api-flower
+  ports:
+  - protocol: TCP
+    port: 80 # Puerto dentro del cluster (estable)
+    targetPort: 8080 # Puerto que expone tu app internamente
+  type: ClusterIP # Opciones: ClusterIP | NodePort | LoadBalancer
