@@ -7,5 +7,5 @@ spec:
   template:
     spec:
       containers:
-        - name: go-api-flower
-          image: docker pull andresdev3/go-api-flower:latest
+        - name: andresdev3/go-api-flower
+          image: andresdev3/go-api-flower:latest
