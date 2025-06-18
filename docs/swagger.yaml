@@ -1,0 +1,54 @@
+basePath: /
+host: localhost:8080
+info:
+  contact:
+    email: andres@example.com
+    name: Andrés
+  description: API que devuelve flores y saluda usuarios.
+  title: Flower API
+  version: "1.0"
+paths:
+  /flowers:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              items:
+                type: string
+              type: array
+            type: object
+      summary: Obtener lista de flores
+  /greet:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Nombre
+        in: body
+        name: input
+        required: true
+        schema:
+          additionalProperties:
+            type: string
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: Saludar a un usuario
+swagger: "2.0"
