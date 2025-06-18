@@ -8,4 +8,4 @@ spec:
     spec:
       containers:
         - name: andresdev3/go-api-flower
-          image: andresdev3/go-api-flower:latest
+          image: andresdev3/go-api-flower:1.0.0
