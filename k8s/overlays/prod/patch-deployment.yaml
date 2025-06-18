@@ -7,5 +7,5 @@ spec:
   template:
     spec:
       containers:
-        - name: andresdev3/go-api-flower
+        - name: flower-api
           image: andresdev3/go-api-flower:1.0.0
